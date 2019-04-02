@@ -2,7 +2,17 @@
 
 https://jqplay.org [![Build Status](https://travis-ci.org/jingweno/jqplay.svg?branch=master)](https://travis-ci.org/jingweno/jqplay) [![OpenCollective](https://opencollective.com/jqplay/backers/badge.svg)](#backers) [![OpenCollective](https://opencollective.com/jqplay/sponsors/badge.svg)](#sponsors)
 
-A playground for [jq](https://github.com/stedolan/jq) made with love by [@jingweno](https://github.com/jingweno), [@lokywin](https://github.com/lokywin) and [@leoping](https://github.com/leoping). Please put it into good use.
+A playground for [jq](https://github.com/stedolan/jq) made with love by [@jingweno](https://github.com/jingweno), [@lokywin](https://github.com/lokywin) and [@leoping](https://github.com/leoping). Please put it into good use. This is my fork which incorporates an auto-updating build and a more modern version of go. It also adds docker-compose to bring everything up. It also fixes a number of issues with the 'old' version when using a more modern debian 9 build.
+
+# Usage
+
+## First Time Use:
+
+`docker-compose up -d --build` 
+
+## After that:
+
+`docker-compose up -d`
 
 ## Development
 
