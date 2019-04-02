@@ -14,19 +14,6 @@ A playground for [jq](https://github.com/stedolan/jq) made with love by [@jingwe
 
 `docker-compose up -d`
 
-## Development
-
-To develop `jqplay`, you need to have a [Go development environment](http://golang.org/doc/install).
-You also need to have Node & Postgresql installed.
-
-### bin/setup
-
-This script will setup Postgresql for `jqplay`.
-
-### bin/start
-
-This script will build and start the `jqplay` server.
-
 ## Support
 
 ### Backers
