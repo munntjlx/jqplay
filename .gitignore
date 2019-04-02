@@ -1,0 +1,9 @@
+bin/jqplay
+gin-bin
+node_modules
+public/bower_components
+public/css
+public/js
+public/index.tmpl
+assets/tmp
+.env
