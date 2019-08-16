@@ -1,0 +1,40 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert --volumes hostPath
+    kompose.version: 1.18.0 ()
+  creationTimestamp: null
+  labels:
+    io.kompose.service: db
+  name: db
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: db
+    spec:
+      containers:
+      - env:
+        - name: POSTGRES_DB
+          value: jqplay-db
+        - name: POSTGRES_PASSWORD
+          value: jqplay-pass
+        - name: POSTGRES_USER
+          value: jqplay-user
+        image: postgres:10.5
+        name: db
+        resources: {}
+        volumeMounts:
+        - mountPath: /docker-entrypoint-initdb.d/db.sql
+          name: db-hostpath0
+      restartPolicy: Always
+      volumes:
+      - hostPath:
+          path: /Users/munntj/src/jqplay/server/db.sql
+        name: db-hostpath0
+status: {}

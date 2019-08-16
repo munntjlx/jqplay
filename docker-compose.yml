@@ -1,4 +1,4 @@
-version: "2.1"
+version: "2"
 
 services:
   db:
@@ -11,7 +11,7 @@ services:
     volumes:
       - ./server/db.sql:/docker-entrypoint-initdb.d/db.sql
   jqplay:
-    build: .
+    image: jingweno/jqplay
     restart: always
     ports:
       - "3000:80"
