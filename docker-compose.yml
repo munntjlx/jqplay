@@ -11,7 +11,7 @@ services:
     volumes:
       - ./server/db.sql:/docker-entrypoint-initdb.d/db.sql
   jqplay:
-    image: jingweno/jqplay
+    image: jqplay:latest
     restart: always
     ports:
       - "3000:80"
