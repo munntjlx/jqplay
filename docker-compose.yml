@@ -17,3 +17,4 @@ services:
       - "3000:80"
     environment:
       DATABASE_URL: "postgres://jqplay-user:jqplay-pass@db/jqplay-db?sslmode=disable"
+    build: .
